@@ -87,8 +87,6 @@ Na przykład: `.codziennie "dzień dobry" 22 30 0` dla wiadomości wysyłanej co
 
 
 
-
-
 # Zwolnij
 @client.event
 async def on_command_error(ctx, error):
@@ -102,4 +100,4 @@ for fn in os.listdir("./cogs"):
         client.load_extension(f"cogs.{fn[:-3]}")
 
 if __name__ == "__main__":
-    client.run(os.environ["DISCORD_TOKEN"])
+    client.run()
