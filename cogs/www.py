@@ -10,7 +10,7 @@ class WWW(commands.Cog):
 
     # support - przyciski
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(name="www", description="(url)")
+    @commands.command(name="www", description="`(url)`")
     async def www(self, ctx):
         dupa = Button(label="Strona Nordynawii", url="https://nordslavpl.wixsite.com/nordynawia", style=ButtonStyle.blurple)
         pupa = Button(label="Kanał YT Kubayashi", url="https://www.youtube.com/channel/UCN83WmVXG44ZuWzc-JyJRfQ")

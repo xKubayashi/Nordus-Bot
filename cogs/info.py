@@ -10,7 +10,7 @@ class Info(commands.Cog):
 
     # Info na temat użytkownika
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(name="profil", description="Informacje na temat użytkownika")
+    @commands.command(name="profil", description="`Informacje na temat użytkownika`")
     async def profil(self, ctx, uzytkownik:nextcord.Member=""):
         if uzytkownik is None or uzytkownik == "":
             uzytkownik = ctx.author
@@ -30,7 +30,7 @@ class Info(commands.Cog):
 
     # Info o Serverze
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(name="server", description="Informacje na temat serwera")
+    @commands.command(name="server", description="`Informacje na temat serwera`")
     async def server(self, ctx):
         guild = ctx.message.author.guild
         embed=Embed(title=guild.name, color=0x0080ff)

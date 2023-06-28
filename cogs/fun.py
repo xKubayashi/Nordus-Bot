@@ -8,34 +8,34 @@ class Fun(commands.Cog):
 
     # Witanie
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(description="Norduś cię wita")
+    @commands.command(description="`Norduś cię wita`")
     async def witaj(self, ctx, uzytkownik:nextcord.Member):
         await ctx.channel.purge(limit=1)
         await ctx.send(f"{ctx.author.mention} wita chuja {uzytkownik.mention}!")
 
     # Furry Pornos
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(description="Furry Porno")
+    @commands.command(description="`Furry Porno`")
     async def cosinus(self, ctx):
         await ctx.channel.purge(limit=1)
         await ctx.send("# Furry Porno")
 
     # Ping
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(description="Chujowy Ping")
+    @commands.command(description="`Chujowy Ping`")
     async def ping(self, ctx):
         await ctx.send("Pong!")
     
     # Tags
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(description="Nwm")
+    @commands.command(description="`Nwm`")
     async def nwm(self, ctx):
         await ctx.channel.purge(limit=1)
         await ctx.send("newem")
 
     # Pokazuje Avatar Usera
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(description="Pokazuje avatar użytkownika")
+    @commands.command(description="`Pokazuje avatar użytkownika`")
     async def avatar(self, ctx, *, uzytkownik:nextcord.Member = ""):
         if uzytkownik is None or uzytkownik == "":
             uzytkownik = ctx.author

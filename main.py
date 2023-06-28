@@ -16,7 +16,7 @@ async def on_ready():
 
 # Info o komendach
 @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-@client.command(name="ovo", description="Komendy Nordusia")
+@client.command(name="ovo", description="`Komendy Nordusia`")
 async def komendy(ctx):
     em = nextcord.Embed(title="UwU ŇỖŘĎЎŇÃŴĮÃ UwU", description=" # Komendy Nordusia:", color=Color.blue()) # color=Color.green() - Zmieniasz kolor obramówki
     for command in client.walk_commands():
@@ -55,7 +55,7 @@ async def schedule_daily_message(h, m, s, msg, channelid):
 
 # codziennie "dzień dobry" 15 58 0
 @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-@client.command(name="codziennie", description="Norduś przypomina. Wysyłaj wiadomość o wyznaczonej godzinie.")
+@client.command(name="codziennie", description="`Norduś przypomina. Wysyłaj wiadomość o wyznaczonej godzinie.`")
 async def codziennie(ctx, wiadomosc:str, godzina:int, minuta:int, sekunda:int):
     print(wiadomosc, godzina, minuta, sekunda)
 
@@ -100,4 +100,4 @@ for fn in os.listdir("./cogs"):
         client.load_extension(f"cogs.{fn[:-3]}")
 
 if __name__ == "__main__":
-    client.run()
+    client.run("MTEyMDY4MTY0OTM4Mjg4MzM5MA.GDiJmz.It1A6LAxANN7OfHc8hySP9fALT4obCAeKPIwyI")

@@ -10,7 +10,7 @@ class Speak(commands.Cog):
 
     # //speak hello world!
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(name="speak", description="Norduś pierdoli")
+    @commands.command(name="speak", description="`Norduś pierdoli. Np: .speak dupa`")
     async def speak(self, ctx, *args):
         msg = " ".join(args)
         font = ImageFont.truetype("Kablammo-Regular-VariableFont_MORF.ttf", 20)

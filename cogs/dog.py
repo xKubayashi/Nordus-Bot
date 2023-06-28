@@ -9,7 +9,7 @@ class Psy(commands.Cog):
 
     # Fotki Psów
     @commands.cooldown(1, 5, commands.BucketType.user) # Ogranicza czas wywoływania tej samej komendy od 1-5 sekund
-    @commands.command(name="psy", description="Zdjęcia Psów")
+    @commands.command(name="psy", description="`Zdjęcia Psów`")
     async def Dog(self, ctx):
         response = requests.get("https://dog.ceo/api/breeds/image/random")
         image_link = response.json()["message"]

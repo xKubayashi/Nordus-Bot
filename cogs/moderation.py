@@ -7,21 +7,21 @@ class Moderation(commands.Cog):
 
     # Banowanie
     @commands.has_permissions(ban_members=True)
-    @commands.command(description="Banuje chuja")
+    @commands.command(description="`Banuje chuja`")
     async def ban(self, ctx, uzytkownik:nextcord.Member, *, powod):
         await ctx.channel.purge(limit=1)
         await uzytkownik.ban(reason=powod)
 
     # Odbanowanie
     @commands.has_permissions(ban_members=True)
-    @commands.command(description="Odbanuje chuja")
+    @commands.command(description="`Odbanuje chuja`")
     async def unban(self, ctx, uzytkownik:nextcord.Member):
         await ctx.channel.purge(limit=1)
         await uzytkownik.unban()
 
     # Wyrzucanie
     @commands.has_permissions(kick_members = True)
-    @commands.command(description="Wyrzucam chuja")
+    @commands.command(description="`Wyrzucam chuja`")
     async def kick(self, ctx, uzytkownik:nextcord.Member, *, powod):
         await ctx.channel.purge(limit=1)
         await uzytkownik.kick(reason=powod)
