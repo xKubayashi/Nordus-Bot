@@ -100,4 +100,4 @@ for fn in os.listdir("./cogs"):
         client.load_extension(f"cogs.{fn[:-3]}")
 
 if __name__ == "__main__":
-    client.run("MTEyMDY4MTY0OTM4Mjg4MzM5MA.GDiJmz.It1A6LAxANN7OfHc8hySP9fALT4obCAeKPIwyI")
+    client.run()
