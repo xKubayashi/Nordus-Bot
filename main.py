@@ -31,8 +31,7 @@ async def komendy(ctx):
 
 
 
-
-
+# Daily Message:
 
 # Wysyłanie wiadomości wyznaczonych porach:
 async def schedule_daily_message(h, m, s, msg, channelid):
